@@ -40,44 +40,29 @@ function initContactForm() {
     successMsg.classList.remove('show');
     errorMsg.classList.remove('show');
 
-    let timeoutId;
     try {
-      const endpoint = form.dataset.endpoint;
-      const controller = new AbortController();
-      timeoutId = setTimeout(() => controller.abort(), 12000);
+      const senderName = nameInput.value.trim();
+      const senderEmail = emailInput.value.trim();
+      const subject = subjectInput.value.trim() || 'Portfolio Contact - Serge Hagopian';
+      const message = messageInput.value.trim();
 
-      const formData = new FormData();
-      formData.append('name', nameInput.value.trim());
-      formData.append('email', emailInput.value.trim());
-      formData.append('subject', subjectInput.value.trim() || 'Portfolio Contact - Serge Hagopian');
-      formData.append('message', messageInput.value.trim());
-      formData.append('_subject', `Portfolio Contact - ${nameInput.value.trim()}`);
-      formData.append('_honey', form.querySelector('input[name="_honey"]')?.value || '');
-      formData.append('_captcha', 'false');
+      const body =
+        `Name: ${senderName}\n` +
+        `Email: ${senderEmail}\n\n` +
+        `Message:\n${message}`;
 
-      const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData,
-        signal: controller.signal
-      });
+      const mailtoUrl =
+        `mailto:shagopian.ieu2024@student.ie.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-      const result = await response.json().catch(() => ({}));
-      const ok = response.ok && (!result || result.success === 'true' || result.success === true);
-
-      if (ok) {
-        successMsg.classList.add('show');
-        form.reset();
-        clearAllFieldStates(form);
-        // Scroll to success message
-        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      } else {
-        throw new Error('Server error');
-      }
+      window.location.href = mailtoUrl;
+      successMsg.textContent = 'Your email app has been opened with a pre-filled draft.';
+      successMsg.classList.add('show');
+      form.reset();
+      clearAllFieldStates(form);
+      successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } catch {
       errorMsg.classList.add('show');
     } finally {
-      if (timeoutId) clearTimeout(timeoutId);
       setSubmitLoading(false, submitBtn);
     }
   });
