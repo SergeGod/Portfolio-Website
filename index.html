@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Serge Hagopian — Computer Science & AI Student | Cloud, Systems & Embedded Development" />
+  <title>Serge Hagopian | Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav id="main-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">
+          <div class="nav-logo-mark">SH</div>
+          Serge Hagopian
+        </a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="assets/cv/Serge_Hagopian_CV.pdf" download="Serge_Hagopian_CV.pdf" class="btn btn-cv">
+            <span>
+              <i data-lucide="download"></i>
+              Download CV
+            </span>
+          </a>
+          <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-mobile-overlay" id="nav-mobile-overlay">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="assets/cv/Serge_Hagopian_CV.pdf" download="Serge_Hagopian_CV.pdf" class="btn btn-primary" style="margin-top: 1rem;">
+      <i data-lucide="download"></i>
+      Download CV
+    </a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-bg-glow-2"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Content -->
+        <div class="hero-content" id="about">
+          <span class="hero-eyebrow">Hi, I'm</span>
+
+          <h1 class="hero-name gradient-text">Serge Hagopian</h1>
+
+          <div class="hero-roles">
+            <span class="badge badge-violet">Cloud</span>
+            <span class="badge badge-cyan">Systems</span>
+            <span class="badge badge-pink">Embedded</span>
+            <span class="badge badge-amber">AI</span>
+          </div>
+
+          <p class="hero-summary">
+            Computer Science &amp; AI student at IE University with experience in cloud deployment,
+            systems programming, and embedded development. Strong foundation in backend logic,
+            client-server architecture, and CI/CD workflows. Interested in scalable SaaS and
+            fintech infrastructure environments.
+          </p>
+
+          <div class="hero-location">
+            <i data-lucide="map-pin"></i>
+            Madrid, Spain
+          </div>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">
+              View Projects
+              <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="assets/cv/Serge_Hagopian_CV.pdf" download="Serge_Hagopian_CV.pdf" class="btn btn-outline">
+              <i data-lucide="download"></i>
+              Download CV
+            </a>
+          </div>
+
+          <span class="hero-note">Eligible to sign an internship agreement via IE University</span>
+        </div>
+
+        <!-- Visual -->
+        <div class="hero-visual">
+          <div class="hero-orb-container">
+            <div class="hero-orb-glow"></div>
+            <div class="hero-orb"></div>
+          </div>
+          <div class="social-links">
+            <a href="mailto:shagopian.ieu2024@student.ie.edu" class="social-link" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+              <i data-lucide="github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Background</span>
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">Building a strong academic foundation in Computer Science and AI.</p>
+      </div>
+
+      <div class="two-col reveal-stagger">
+        <!-- IE University -->
+        <div class="edu-card reveal-left">
+          <div class="edu-header">
+            <div>
+              <div class="edu-institution">IE University (IEU)</div>
+              <div class="edu-degree">Bachelor's in Computer Science &amp; AI</div>
+            </div>
+            <div class="edu-meta">
+              <div class="edu-location">Madrid, Spain</div>
+              <span class="badge badge-amber" style="margin-top: 0.5rem;">Expected May 2026</span>
+            </div>
+          </div>
+          <div class="edu-gpa-label">GPA</div>
+          <div class="edu-gpa-value">7.26 / 10</div>
+          <div class="gpa-bar-wrap">
+            <div class="gpa-bar-fill" data-width="72.6%"></div>
+          </div>
+        </div>
+
+        <!-- Lycée Libanais -->
+        <div class="edu-card reveal-right">
+          <div class="edu-header">
+            <div>
+              <div class="edu-institution">Lycée Libanais Francophone Privée</div>
+              <div class="edu-degree">French Baccalaureate</div>
+            </div>
+            <div class="edu-meta">
+              <div class="edu-location">Dubai, United Arab Emirates</div>
+              <span class="badge badge-cyan" style="margin-top: 0.5rem;">Graduated June 2024</span>
+            </div>
+          </div>
+          <div class="edu-gpa-label">GPA</div>
+          <div class="edu-gpa-value">14.75 / 20</div>
+          <div class="gpa-bar-wrap">
+            <div class="gpa-bar-fill" data-width="73.75%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Work</span>
+        <h2 class="section-title">Projects &amp; Experience</h2>
+        <p class="section-subtitle">Building real systems across cloud, networking, and embedded hardware.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Project 1 -->
+        <div class="timeline-item">
+          <div class="timeline-card reveal-left">
+            <div class="project-header">
+              <div>
+                <div class="project-name">Serverless Multi-Restaurant Ordering Platform</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;flex-shrink:0;">
+                <span class="badge badge-amber">Sept – Dec 2025</span>
+                <span class="badge badge-cyan">Cloud &amp; DevOps</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tech-tag">Azure Functions</span>
+              <span class="tech-tag">CI/CD</span>
+              <span class="tech-tag">GitHub Actions</span>
+              <span class="tech-tag">REST API</span>
+              <span class="tech-tag">Serverless</span>
+              <span class="tech-tag">Team: 5</span>
+            </div>
+            <ul class="fancy-list project-bullets">
+              <li>Integrated Azure Functions backend with GitHub repository to enable automated CI/CD cloud deployments.</li>
+              <li>Managed serverless function packaging and deployment workflows across environments.</li>
+              <li>Contributed to backend-frontend API integration and deployment debugging within a 5-person team.</li>
+            </ul>
+          </div>
+          <div class="timeline-dot-wrap">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-empty"></div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="timeline-item">
+          <div class="timeline-empty"></div>
+          <div class="timeline-dot-wrap">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-card reveal-right">
+            <div class="project-header">
+              <div>
+                <div class="project-name">Multiplayer Client-Server Hangman Game</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;flex-shrink:0;">
+                <span class="badge badge-amber">October 2025</span>
+                <span class="badge badge-violet">Systems Programming</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">Sockets</span>
+              <span class="tech-tag">TCP/IP</span>
+              <span class="tech-tag">Client-Server</span>
+              <span class="tech-tag">200+ commits</span>
+            </div>
+            <ul class="fancy-list project-bullets">
+              <li>Developed and maintained client-side logic (<code style="font-family:var(--font-mono);font-size:0.8em;color:var(--color-accent-2)">client.c</code>) for a multiplayer socket-based application in C.</li>
+              <li>Implemented real-time input handling and structured client-server communication.</li>
+              <li>Contributed to modular separation of client, server, and shared components (200+ commits, team project).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="timeline-item">
+          <div class="timeline-card reveal-left">
+            <div class="project-header">
+              <div>
+                <div class="project-name">Byte-Beat Embedded Interactive System</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;flex-shrink:0;">
+                <span class="badge badge-amber">Dec 2024 – Present</span>
+                <span class="badge badge-pink">Embedded &amp; Hardware</span>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Arduino</span>
+              <span class="tech-tag">PWM</span>
+              <span class="tech-tag">LCD Display</span>
+              <span class="tech-tag">Onshape CAD</span>
+              <span class="tech-tag">Signal Conditioning</span>
+            </div>
+            <ul class="fancy-list project-bullets">
+              <li>Designed and programmed a modular Arduino-based embedded system in C++.</li>
+              <li>Engineered circuit with current-limiting calculations and signal conditioning.</li>
+              <li>Integrated LCD display and PWM-controlled audio feedback; designed custom 3D-printed enclosure using Onshape.</li>
+            </ul>
+          </div>
+          <div class="timeline-dot-wrap">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-empty"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== LANGUAGES ===== -->
+  <section id="languages">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Communication</span>
+        <h2 class="section-title">Languages</h2>
+        <p class="section-subtitle">Fluent across multiple languages and cultures.</p>
+      </div>
+
+      <div class="flex-wrap-row reveal-stagger">
+        <div class="language-card reveal">
+          <div class="language-flag">🇬🇧</div>
+          <div class="language-name">English</div>
+          <div class="prof-dots">
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot"></div>
+          </div>
+          <div class="language-level">Fluent</div>
+        </div>
+
+        <div class="language-card reveal">
+          <div class="language-flag">🇫🇷</div>
+          <div class="language-name">French</div>
+          <div class="prof-dots">
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+          </div>
+          <div class="language-level">Native</div>
+        </div>
+
+        <div class="language-card reveal">
+          <div class="language-flag">🇱🇧</div>
+          <div class="language-name">Arabic</div>
+          <div class="prof-dots">
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+          </div>
+          <div class="language-level">Native</div>
+        </div>
+
+        <div class="language-card reveal">
+          <div class="language-flag">🇦🇲</div>
+          <div class="language-name">Armenian</div>
+          <div class="prof-dots">
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+          </div>
+          <div class="language-level">Native (Lebanese Dialect)</div>
+        </div>
+
+        <div class="language-card reveal">
+          <div class="language-flag">🇪🇸</div>
+          <div class="language-name">Spanish</div>
+          <div class="prof-dots">
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot filled"></div>
+            <div class="prof-dot"></div>
+            <div class="prof-dot"></div>
+          </div>
+          <div class="language-level">Intermediate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Toolkit</span>
+        <h2 class="section-title">Skills &amp; Interests</h2>
+        <p class="section-subtitle">Tools, technologies, and domains I work with.</p>
+      </div>
+
+      <div class="three-col reveal-stagger">
+        <!-- AI Tools -->
+        <div class="skill-card skill-card-ai reveal">
+          <div class="skill-card-icon">
+            <i data-lucide="cpu"></i>
+          </div>
+          <div class="skill-card-title">AI Tools</div>
+          <div class="skill-tags">
+            <span class="badge badge-violet">Raycast</span>
+            <span class="badge badge-violet">Cursor</span>
+            <span class="badge badge-violet">Codex</span>
+            <span class="badge badge-violet">Claude</span>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="skill-card skill-card-cloud reveal">
+          <div class="skill-card-icon">
+            <i data-lucide="cloud"></i>
+          </div>
+          <div class="skill-card-title">Cloud &amp; DevOps</div>
+          <div class="skill-tags">
+            <span class="badge badge-cyan">Microsoft Azure</span>
+            <span class="badge badge-cyan">GitHub Actions</span>
+            <span class="badge badge-cyan">CI/CD</span>
+            <span class="badge badge-cyan">Serverless</span>
+          </div>
+        </div>
+
+        <!-- Systems Programming -->
+        <div class="skill-card skill-card-systems reveal">
+          <div class="skill-card-icon">
+            <i data-lucide="code-2"></i>
+          </div>
+          <div class="skill-card-title">Systems Programming</div>
+          <div class="skill-tags">
+            <span class="badge badge-pink">C</span>
+            <span class="badge badge-pink">C++</span>
+            <span class="badge badge-pink">Arduino</span>
+            <span class="badge badge-pink">Sockets</span>
+            <span class="badge badge-pink">Embedded</span>
+          </div>
+        </div>
+
+        <!-- Tools & OS -->
+        <div class="skill-card skill-card-tools reveal">
+          <div class="skill-card-icon">
+            <i data-lucide="monitor"></i>
+          </div>
+          <div class="skill-card-title">Tools &amp; OS</div>
+          <div class="skill-tags">
+            <span class="badge badge-amber">macOS</span>
+            <span class="badge badge-amber">Onshape</span>
+            <span class="badge badge-amber">Git</span>
+            <span class="badge badge-amber">VS Code</span>
+          </div>
+        </div>
+
+        <!-- Social & Marketing -->
+        <div class="skill-card skill-card-social reveal">
+          <div class="skill-card-icon">
+            <i data-lucide="trending-up"></i>
+          </div>
+          <div class="skill-card-title">Social &amp; Marketing</div>
+          <div class="skill-tags">
+            <span class="tech-tag">Trend Analysis</span>
+            <span class="tech-tag">Community Engagement</span>
+            <span class="tech-tag">Social Media</span>
+          </div>
+        </div>
+
+        <!-- Interests -->
+        <div class="skill-card skill-card-interests reveal">
+          <div class="skill-card-icon">
+            <i data-lucide="star"></i>
+          </div>
+          <div class="skill-card-title">Interests</div>
+          <div class="skill-tags">
+            <span class="tech-tag">Digital Marketing</span>
+            <span class="tech-tag">Crypto/Blockchain</span>
+            <span class="tech-tag">Padel</span>
+            <span class="tech-tag">Finance.AI</span>
+            <span class="tech-tag">Personal Growth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Get in touch</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Open to internship opportunities, collaborations, and interesting projects.</p>
+      </div>
+
+      <div class="two-col contact-grid">
+        <!-- Info -->
+        <div class="contact-info reveal-left">
+          <p class="contact-desc">
+            I'm actively seeking internship opportunities where I can apply my skills in cloud infrastructure,
+            systems development, or embedded engineering. I'm eligible to sign an internship agreement
+            through IE University.
+          </p>
+
+          <div class="contact-details">
+            <div class="info-row">
+              <i data-lucide="mail"></i>
+              <a href="mailto:shagopian.ieu2024@student.ie.edu">shagopian.ieu2024@student.ie.edu</a>
+            </div>
+            <div class="info-row">
+              <i data-lucide="phone"></i>
+              <a href="tel:+34605726317">(+34) 605 726 317</a>
+            </div>
+            <div class="info-row">
+              <i data-lucide="map-pin"></i>
+              <span>Madrid, Spain</span>
+            </div>
+            <div class="info-row">
+              <i data-lucide="graduation-cap"></i>
+              <span>IE University — CS &amp; AI, Expected May 2026</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="mailto:shagopian.ieu2024@student.ie.edu" class="social-link" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+              <i data-lucide="github"></i>
+            </a>
+          </div>
+
+          <a href="assets/cv/Serge_Hagopian_CV.pdf" download="Serge_Hagopian_CV.pdf" class="btn btn-primary" style="align-self: flex-start;">
+            <i data-lucide="download"></i>
+            Download CV
+          </a>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrap reveal-right">
+          <form id="contact-form" class="contact-form">
+            <!-- Web3Forms access key - replace with your own from https://web3forms.com -->
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+            <input type="hidden" name="subject" value="Portfolio Contact - Serge Hagopian" />
+            <input type="hidden" name="from_name" value="Portfolio Website" />
+            <input type="checkbox" name="botcheck" style="display:none;" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required />
+                <span class="form-helper" id="name-helper"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required />
+                <span class="form-helper" id="email-helper"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <input class="form-input" type="text" id="subject" name="subject_line" placeholder="What's this about?" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" name="message" rows="5" placeholder="Tell me about the opportunity or project..." required></textarea>
+              <span class="form-helper" id="message-helper"></span>
+            </div>
+
+            <button type="submit" class="btn btn-submit" id="submit-btn">
+              <span class="btn-text" style="display:flex;align-items:center;gap:0.5rem;">
+                Send Message
+                <i data-lucide="send"></i>
+              </span>
+              <span class="btn-spinner" style="display:none;align-items:center;gap:0.5rem;">
+                Sending...
+              </span>
+            </button>
+          </form>
+
+          <div class="form-success" id="form-success">
+            Message sent successfully! I'll get back to you soon.
+          </div>
+          <div class="form-error" id="form-error">
+            Something went wrong. Please email me directly at
+            <a href="mailto:shagopian.ieu2024@student.ie.edu" style="color: var(--color-accent-3); text-decoration: underline;">shagopian.ieu2024@student.ie.edu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-copy">© 2025 Serge Hagopian. Built with HTML · CSS · JS</span>
+        <nav class="footer-links">
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

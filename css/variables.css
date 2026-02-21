@@ -1,0 +1,80 @@
+:root {
+  /* Background Colors */
+  --color-bg:           #0A0A0F;
+  --color-bg-surface:   #12121A;
+  --color-bg-elevated:  #1C1C2E;
+
+  /* Accent Colors */
+  --color-accent-1:     #7B2FFF;
+  --color-accent-2:     #00D4FF;
+  --color-accent-3:     #FF3CAC;
+  --color-accent-4:     #FFB800;
+
+  /* Text Colors */
+  --color-text-primary:   #F0F0FF;
+  --color-text-secondary: #8888AA;
+  --color-text-muted:     #4A4A6A;
+
+  /* Border Colors */
+  --color-border:       #2A2A3E;
+  --color-border-glow:  rgba(123, 47, 255, 0.4);
+
+  /* Font Families */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Font Sizes */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  3.75rem;
+  --text-7xl:  4.5rem;
+
+  /* Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Border Radius */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-card:       0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow-1:     0 0 40px rgba(123, 47, 255, 0.3);
+  --shadow-glow-2:     0 0 40px rgba(0, 212, 255, 0.3);
+  --shadow-glow-hover: 0 20px 60px rgba(123, 47, 255, 0.25);
+
+  /* Transitions */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.3s ease;
+  --transition-slow:   0.6s ease;
+
+  /* Nav Height */
+  --nav-height: 72px;
+
+  /* Container */
+  --container-max: 1200px;
+  --container-padding: var(--space-6);
+}
