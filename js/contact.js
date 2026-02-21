@@ -41,17 +41,29 @@ function initContactForm() {
     errorMsg.classList.remove('show');
 
     try {
-      // Using Web3Forms - free service, no account needed beyond an access key
-      // Replace YOUR_ACCESS_KEY with a key from https://web3forms.com (free)
-      const formData = new FormData(form);
+      const endpoint = form.dataset.endpoint;
+      const payload = {
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        subject: subjectInput.value.trim() || 'Portfolio Contact - Serge Hagopian',
+        message: messageInput.value.trim(),
+        _subject: `Portfolio Contact - ${nameInput.value.trim()}`,
+        _honey: form.querySelector('input[name="_honey"]')?.value || ''
+      };
 
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch(endpoint, {
         method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
       });
 
-      if (response.ok) {
+      const result = await response.json().catch(() => null);
+      const ok = response.ok && (!result || result.success === 'true' || result.success === true);
+
+      if (ok) {
         successMsg.classList.add('show');
         form.reset();
         clearAllFieldStates(form);
