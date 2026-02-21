@@ -40,27 +40,29 @@ function initContactForm() {
     successMsg.classList.remove('show');
     errorMsg.classList.remove('show');
 
+    let timeoutId;
     try {
       const endpoint = form.dataset.endpoint;
-      const payload = {
-        name: nameInput.value.trim(),
-        email: emailInput.value.trim(),
-        subject: subjectInput.value.trim() || 'Portfolio Contact - Serge Hagopian',
-        message: messageInput.value.trim(),
-        _subject: `Portfolio Contact - ${nameInput.value.trim()}`,
-        _honey: form.querySelector('input[name="_honey"]')?.value || ''
-      };
+      const controller = new AbortController();
+      timeoutId = setTimeout(() => controller.abort(), 12000);
+
+      const formData = new FormData();
+      formData.append('name', nameInput.value.trim());
+      formData.append('email', emailInput.value.trim());
+      formData.append('subject', subjectInput.value.trim() || 'Portfolio Contact - Serge Hagopian');
+      formData.append('message', messageInput.value.trim());
+      formData.append('_subject', `Portfolio Contact - ${nameInput.value.trim()}`);
+      formData.append('_honey', form.querySelector('input[name="_honey"]')?.value || '');
+      formData.append('_captcha', 'false');
 
       const response = await fetch(endpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(payload)
+        headers: { 'Accept': 'application/json' },
+        body: formData,
+        signal: controller.signal
       });
 
-      const result = await response.json().catch(() => null);
+      const result = await response.json().catch(() => ({}));
       const ok = response.ok && (!result || result.success === 'true' || result.success === true);
 
       if (ok) {
@@ -75,6 +77,7 @@ function initContactForm() {
     } catch {
       errorMsg.classList.add('show');
     } finally {
+      if (timeoutId) clearTimeout(timeoutId);
       setSubmitLoading(false, submitBtn);
     }
   });
